@@ -1,0 +1,24 @@
+footer{
+    width: 100%;
+    background-color: #081021;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    padding: 30px;
+}
+.social-container{
+    display: flex;
+    margin-top: 20px;
+}
+.social-container a{
+    margin-right: 10px;
+    transition: 0.15s ease-in-out;
+    margin: 0 1em;
+    filter: grayscale(1);
+}
+.social-container a:hover{
+    filter: grayscale(0);
+    transform: scale(1.3);
+}

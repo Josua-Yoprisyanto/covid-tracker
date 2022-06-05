@@ -1,0 +1,195 @@
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+}
+.definition {
+  width: 100%;
+  display: flex;
+}
+.definition-information {
+  width: 50%;
+}
+.definition-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.definition-img img {
+  width: 100%;
+}
+.definition-text {
+  color: #081021;
+}
+.symptoms-container {
+  display: flex;
+  margin-top: 100px;
+}
+.symptoms-information {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.symptoms {
+  margin: 5px;
+  padding: 5px;
+  font-size: 20px;
+  width: 200px;
+}
+.symptoms-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.symptoms-img img {
+  width: 100%;
+}
+.content-title {
+  color: #081021;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prevent-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../images/shield.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.prevent-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prevent-img img {
+  width: 100%;
+}
+.prevent-information {
+  width: 50%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.prevent {
+  font-size: 20px;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.prevent-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.prevent img {
+  width: 100px;
+  height: 100px;
+}
+.prevent span {
+  text-align: center;
+  width: 150px;
+  font-size: 20px;
+}
+.symptoms-container-mobile {
+  display: none;
+}
+.about {
+  background-color: #081021;
+  width: 120px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #a0beff;
+}
+.arrow {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .definition-img {
+    display: none;
+  }
+  .content-title {
+    margin-top: 100px;
+  }
+  .definition-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+  }
+  p {
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 769px) {
+  .symptoms-container {
+    display: none;
+  }
+  .symptoms-container-mobile {
+    display: block;
+  }
+  .symptoms-information-mobile {
+    display: flex;
+  }
+  .symptoms-description {
+    width: 50%;
+  }
+  .symptoms-container-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .prevent-container {
+    background-image: none;
+  }
+  .prevent-right {
+    justify-content: flex-start;
+  }
+  .prevent {
+    background-color: #081021;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: center;
+    color: #a0beff;
+  }
+  .arrow {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 550px) {
+  .content-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .symptoms {
+    width: 150px;
+  }
+}

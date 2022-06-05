@@ -1,0 +1,140 @@
+header{
+    width: 100%;
+    background-color: #081021;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.title{
+    color: #a0beff;
+}
+.head-section{
+    display: flex;
+    width: 100%;
+}
+.head-section1{
+    width: 50%;
+    padding-right: 100px;
+}
+.head-section2{
+    width: 50%;
+}
+.head-section2 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.cases-container{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px gray;
+    padding: 50px 50px 20px 50px;
+    margin-top: 100px;
+}
+.cases{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date-mobile{
+    display: none;
+}
+.head-section-mobile{
+    display: none;
+}
+.head-section1 .btn{
+    color: #a0beff;
+    border: 1px solid #a0beff;
+    font-weight: bold;
+}
+.head-section1 .btn:hover{
+    color: #081021;
+    background-color: #a0beff;
+}
+@media screen and (max-width: 991px) {
+    .head-section1{
+        padding-right: 30px;
+    }
+    .head-section2 img{
+        height: 100%;
+    }
+    
+}
+@media screen and (max-width: 767px) {
+    .cases-container{
+        box-shadow: none;
+        padding: 0;
+    }
+    .cases{
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 0 10px gray;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    .date{
+        display: none;
+    }
+    .date-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .head-section{
+        display: none;
+    }
+    .head-section-mobile{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .head-section1{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .head-open{
+        width: 50%;
+    }
+    .head-img{
+        width: 50%;
+    }
+    .head-img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .head-section2{
+        width: 100%;
+        text-align: justify;
+    }
+    .head-section2 button{
+        width: 100%;
+    }
+    .head-section2 .btn{
+        color: #a0beff;
+        border: 1px solid #a0beff;
+        font-weight: bold;
+        width: 100%;
+    }
+    .head-section2 .btn:hover{
+        color: #081021;
+        background-color: #a0beff;
+    }
+    
+}
+@media screen and (max-width: 575px) {
+    .cases-information{
+        padding: 20px;
+    }
+    .head-section{
+        padding: 20px;
+    }
+}
