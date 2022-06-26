@@ -26,7 +26,7 @@ const Content = () => {
                 {/* symptoms pc */}
                 <section className='symptoms-container'>
                     <div className='symptoms-information'>
-                        <span className='about' id="symptoms">Gejala</span>
+                        <span className='about' id="symptoms-pc">Gejala</span>
                         <h1 className='mt-2'>Apa saja gejala COVID-19?</h1>
                         <p className='mt-4'>Waktu dari paparan virus hingga timbulnya gejala klinis antara 1-14 hari dengan rata-rata 5 hari. Maka, orang yang sedang sakit diwajibkan memakai masker guna meminimalisir penyebaran droplet.</p>
                         <div className='grid-container'>
@@ -58,7 +58,7 @@ const Content = () => {
 
                 {/* symptoms mobile */}
                 <section className='symptoms-container-mobile'>
-                    <span className='about' id='symptoms'>Gejala</span>
+                    <span className='about' id='symptoms-mobile'>Gejala</span>
                     <h1 className='mt-2'>Apa saja gejala COVID-19?</h1>
                     <div className='symptoms-information-mobile'>
                         <div className='symptoms-description'>

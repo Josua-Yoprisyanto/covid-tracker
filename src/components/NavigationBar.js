@@ -17,9 +17,16 @@ const NavigationBar = () => {
                                 </Link>
                             </li>
                         </Navbar.Text>
-                        <Navbar.Text>
+                        <Navbar.Text className="symptoms-pc">
                             <li>
-                                <Link to="symptomss" spy={true} smooth={true} offset={50} duration={500}>
+                                <Link to="symptoms-pc" spy={true} smooth={true} offset={50} duration={500}>
+                                    Gejala
+                                </Link>
+                            </li>
+                        </Navbar.Text>
+                        <Navbar.Text className="symptoms-mobile">
+                            <li>
+                                <Link to="symptoms-mobile" spy={true} smooth={true} offset={50} duration={500}>
                                     Gejala
                                 </Link>
                             </li>

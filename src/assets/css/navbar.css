@@ -15,6 +15,9 @@ li:hover{
     text-shadow: 0 0 10px white;
     /* transform: scale(1.1); */
 }
+.symptoms-mobile{
+    display: none;
+}
 @media screen and (max-width: 991px) {
     li{
         text-align: center;  
@@ -26,6 +29,12 @@ li:hover{
         border: 1px solid #a0beff;
         transform: scale(1);
         text-shadow: none;
+    }
+    .symptoms-mobile{
+        display: block;
+    }
+    .symptoms-pc{
+        display: none;
     }
 }
 @media screen and (max-width: 800px) {
