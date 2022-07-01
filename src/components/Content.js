@@ -2,8 +2,6 @@ import React from 'react'
 import "../assets/css/content.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faArrowDown } from "@fortawesome/free-solid-svg-icons"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Content = () => {
     return (

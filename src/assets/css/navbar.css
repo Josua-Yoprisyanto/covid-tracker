@@ -13,7 +13,6 @@ li{
 }
 li:hover{
     text-shadow: 0 0 10px white;
-    /* transform: scale(1.1); */
 }
 .symptoms-mobile{
     display: none;
@@ -22,12 +21,10 @@ li:hover{
     li{
         text-align: center;  
         padding: 5px;
-        margin: 0;
+        background-color: #101e3d;
     }
     li:hover{
         color: #a0beff;
-        border: 1px solid #a0beff;
-        transform: scale(1);
         text-shadow: none;
     }
     .symptoms-mobile{
