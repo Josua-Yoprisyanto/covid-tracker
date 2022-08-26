@@ -2,6 +2,12 @@ import React from 'react'
 import "../assets/css/content.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faArrowDown } from "@fortawesome/free-solid-svg-icons"
+import DistanceImage from '../assets/images/distance.png'
+import CleanImage from '../assets/images/clean.png'
+import FightImage from '../assets/images/fight.jpg'
+import MaskImage from '../assets/images/mask.png'
+import SymptomsImage from '../assets/images/symptoms.png'
+import WashhandImage from '../assets/images/washhand.png'
 
 const Content = () => {
     return (
@@ -9,7 +15,7 @@ const Content = () => {
             <div className='container content-container mb-5' >
                 <section className='definition mt-5'>
                     <div className="definition-img">
-                        <img src='images/fight.jpg' />
+                        <img src={FightImage} />
                     </div>
                     <div className="definition-information">
                         <span className='about' id='definition'>Pengertian</span>
@@ -49,7 +55,7 @@ const Content = () => {
                         </div>
                     </div>
                     <div className='symptoms-img'>
-                        <img src='images/symptoms.png' />
+                        <img src={SymptomsImage} />
                     </div>
                 </section>
 
@@ -63,7 +69,7 @@ const Content = () => {
                             <p className='mt-4'>Waktu dari paparan virus hingga timbulnya gejala klinis antara 1-14 hari dengan rata-rata 5 hari. Maka, orang yang sedang sakit diwajibkan memakai masker guna meminimalisir penyebaran droplet.</p>
                         </div>
                         <div className='symptoms-img'>
-                            <img src='images/symptoms.png' />
+                            <img src={SymptomsImage} />
                         </div>
                     </div>
                     <div className='grid-container'>
@@ -102,21 +108,21 @@ const Content = () => {
                 <section className='prevent-container row'>
                     <div className='prevent-information col'>
                         <div className='prevent'>
-                            <img src="images/washHand.png" />
+                            <img src={WashhandImage} />
                             <span>Cuci Tangan</span>
                         </div>
                         <div className='prevent'>
-                            <img src="images/mask.png" />
+                            <img src={MaskImage} />
                             <span>Pakai Masker</span>
                         </div>
                     </div>
                     <div className='prevent-information col'>
                         <div className='prevent prevent-right'>
-                            <img src="images/clean.png" />
+                            <img src={CleanImage} />
                             <span>Disinfektan</span>
                         </div>
                         <div className='prevent prevent-right'>
-                            <img src="images/distance.png" />
+                            <img src={DistanceImage} />
                             <span>Menjaga Jarak</span>
                         </div>
                     </div>

@@ -1,10 +1,11 @@
-import { Autocomplete, TextField } from '@mui/material'
 import React from 'react'
 import '../assets/css/header.css'
 import NavigationBar from './NavigationBar'
+import FamilyImage from '../assets/images/family.png'
 
-const Header = ({ cases }) => {
+const Header = (props) => {
 
+  const { cases } = props
 
   const dateBuilder = (d) => {
     const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
@@ -38,7 +39,7 @@ const Header = ({ cases }) => {
             <a href="https://covid19.go.id/p/panduan/pendaftaran-vaksinasi-covid19" target="_blank" className='btn mt-3'>Panduan Pendaftaran Vaksinasi Pedulilindungi</a>
           </div>
           <div className='head-section2'>
-            <img src="images/family.png" />
+            <img src={FamilyImage} />
           </div>
         </div>
         {/* head-section mobile */}
