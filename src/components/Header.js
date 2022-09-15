@@ -2,7 +2,6 @@ import React from 'react'
 import '../assets/css/header.css'
 import NavigationBar from './NavigationBar'
 import FamilyImage from '../assets/images/family.png'
-import { Spinner } from 'react-bootstrap'
 
 const Header = (props) => {
 
@@ -20,8 +19,6 @@ const Header = (props) => {
     return `${day}, ${date} ${month} ${year}`
 
   }
-
-  console.log(cases?.c)
 
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
