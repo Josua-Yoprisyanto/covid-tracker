@@ -2,6 +2,7 @@ import React from 'react'
 import '../assets/css/header.css'
 import NavigationBar from './NavigationBar'
 import FamilyImage from '../assets/images/family.png'
+import { Spinner } from 'react-bootstrap'
 
 const Header = (props) => {
 
@@ -19,6 +20,8 @@ const Header = (props) => {
     return `${day}, ${date} ${month} ${year}`
 
   }
+
+  console.log(cases?.c)
 
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -71,19 +74,19 @@ const Header = (props) => {
           </div>
           <div className='cases-information row'>
             <div className='col-md-3 cases'>
-              <h3>{numberWithCommas(cases === undefined ? "" : cases.cases.new)}</h3>
+              <h3>{numberWithCommas(cases === undefined ? 0 : cases.cases.new !== null ? cases.cases.new : 0)}</h3>
               <span>Kasus Baru</span>
             </div>
             <div className='col-md-3 cases'>
-              <h3>{numberWithCommas(cases === undefined ? "" : cases.cases.total)}</h3>
+              <h3>{numberWithCommas(cases === undefined ? 0 : cases.cases.total !== null ? cases.cases.total : 0)}</h3>
               <span>Total Konfirmasi</span>
             </div>
             <div className='col-md-3 cases'>
-              <h3>{numberWithCommas(cases === undefined ? "" : cases.cases.recovered)}</h3>
+              <h3>{numberWithCommas(cases === undefined ? 0 : cases.cases.recovered !== null ? cases.cases.recovered : 0)}</h3>
               <span>Total sembuh</span>
             </div>
             <div className='col-md-3 cases'>
-              <h3>{numberWithCommas(cases === undefined ? "" : cases.deaths.total)}</h3>
+              <h3>{numberWithCommas(cases === undefined ? 0 : cases.deaths.total !== null ? cases.deaths.total : 0)}</h3>
               <span>Total Meninggal</span>
             </div>
           </div>
