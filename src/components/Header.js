@@ -1,99 +1,165 @@
-import React from 'react'
-import '../assets/css/header.css'
-import NavigationBar from './NavigationBar'
-import FamilyImage from '../assets/images/family.png'
+import React from "react";
+import "../assets/css/header.css";
+import NavigationBar from "./NavigationBar";
+import FamilyImage from "../assets/images/family.png";
 
 const Header = (props) => {
-
-  const { cases } = props
+  const { cases } = props;
 
   const dateBuilder = (d) => {
-    const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-    const months = ["Januari", "February", "Maret", "April", "Mei", "Juni", "July", "Agustus", "September", "Oktober", "November", "Desember"]
+    const days = [
+      "Minggu",
+      "Senin",
+      "Selasa",
+      "Rabu",
+      "Kamis",
+      "Jumat",
+      "Sabtu",
+    ];
+    const months = [
+      "Januari",
+      "February",
+      "Maret",
+      "April",
+      "Mei",
+      "Juni",
+      "July",
+      "Agustus",
+      "September",
+      "Oktober",
+      "November",
+      "Desember",
+    ];
 
     let day = days[d.getDay()];
     let date = d.getDate();
-    let month = months[d.getMonth()]
+    let month = months[d.getMonth()];
     let year = d.getFullYear();
 
-    return `${day}, ${date} ${month} ${year}`
-
-  }
+    return `${day}, ${date} ${month} ${year}`;
+  };
 
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  };
 
   return (
     <header>
-      <div className='container'>
+      <div className="container">
         <NavigationBar />
         {/* head-section pc */}
-        <div className='head-section mt-5'>
-          <div className='head-section1'>
-            <span className='title'>Dapatkan Vaksinasi Sekarang</span>
-            <h1 className='mt-3'>Lindungi Keluarga, Selamatkan Dunia</h1>
-            <p className='mt-3'>
-              Tubuh seseorang yang telah disuntikkan vaksin, akan merangsang antibodi untuk belajar dan mengenali virus yang telah dilemahkan tersebut. Dengan demikian, tubuh akan mengenai virus dan mengurang risiko terpapar.
+        <div className="head-section mt-5">
+          <div className="head-section1">
+            <span className="title">Dapatkan Vaksinasi Sekarang</span>
+            <h1 className="mt-3">Lindungi Keluarga, Selamatkan Dunia</h1>
+            <p className="mt-3">
+              Tubuh seseorang yang telah disuntikkan vaksin, akan merangsang
+              antibodi untuk belajar dan mengenali virus yang telah dilemahkan
+              tersebut. Dengan demikian, tubuh akan mengenai virus dan mengurang
+              risiko terpapar.
             </p>
-            <a href="https://covid19.go.id/p/panduan/pendaftaran-vaksinasi-covid19" target="_blank" className='btn mt-3'>Panduan Pendaftaran Vaksinasi Pedulilindungi</a>
+            <a
+              href="https://covid19.go.id/p/panduan/pendaftaran-vaksinasi-covid19"
+              target="_blank"
+              className="btn mt-3"
+            >
+              Panduan Pendaftaran Vaksinasi Pedulilindungi
+            </a>
           </div>
-          <div className='head-section2'>
+          <div className="head-section2">
             <img src={FamilyImage} />
           </div>
         </div>
         {/* head-section mobile */}
-        <div className='head-section-mobile mt-5'>
-          <div className='head-section1'>
-            <div className='head-open'>
-              <span className='title'>Dapatkan Vaksinasi Sekarang</span>
-              <h1 className='mt-3'>Lindungi Keluarga, Selamatkan Dunia</h1>
+        <div className="head-section-mobile mt-5">
+          <div className="head-section1">
+            <div className="head-open">
+              <span className="title">Dapatkan Vaksinasi Sekarang</span>
+              <h1 className="mt-3">Lindungi Keluarga, Selamatkan Dunia</h1>
             </div>
-            <div className='head-img'>
-              <img src="images/family.png" />
+            <div className="head-img">
+              <img src={FamilyImage} />
             </div>
           </div>
-          <div className='head-section2'>
-            <p className='mt-3'>
-              Tubuh seseorang yang telah disuntikkan vaksin, akan merangsang antibodi untuk belajar dan mengenali virus yang telah dilemahkan tersebut. Dengan demikian, tubuh akan mengenai virus dan mengurang risiko terpapar.
+          <div className="head-section2">
+            <p className="mt-3">
+              Tubuh seseorang yang telah disuntikkan vaksin, akan merangsang
+              antibodi untuk belajar dan mengenali virus yang telah dilemahkan
+              tersebut. Dengan demikian, tubuh akan mengenai virus dan mengurang
+              risiko terpapar.
             </p>
-            <a href="https://covid19.go.id/p/panduan/pendaftaran-vaksinasi-covid19" target="_blank" className='btn mt-3'>Daftar Vaksinasi Pedulilindungi</a>
+            <a
+              href="https://covid19.go.id/p/panduan/pendaftaran-vaksinasi-covid19"
+              target="_blank"
+              className="btn mt-3"
+            >
+              Daftar Vaksinasi Pedulilindungi
+            </a>
           </div>
         </div>
 
-
-
-
-        <div className='cases-container mb-5'>
-          <div className='date-mobile mb-3'>
+        <div className="cases-container mb-5">
+          <div className="date-mobile mb-3">
             <h4>Kasus COVID-19 Indonesia,</h4>
             <h4>{dateBuilder(new Date())}</h4>
           </div>
-          <div className='cases-information row'>
-            <div className='col-md-3 cases'>
-              <h3>{numberWithCommas(cases === undefined ? 0 : cases.cases.new !== null ? cases.cases.new : 0)}</h3>
+          <div className="cases-information row">
+            <div className="col-md-3 cases">
+              <h3>
+                {numberWithCommas(
+                  cases === undefined
+                    ? 0
+                    : cases.cases.new !== null
+                    ? cases.cases.new
+                    : 0
+                )}
+              </h3>
               <span>Kasus Baru</span>
             </div>
-            <div className='col-md-3 cases'>
-              <h3>{numberWithCommas(cases === undefined ? 0 : cases.cases.total !== null ? cases.cases.total : 0)}</h3>
+            <div className="col-md-3 cases">
+              <h3>
+                {numberWithCommas(
+                  cases === undefined
+                    ? 0
+                    : cases.cases.total !== null
+                    ? cases.cases.total
+                    : 0
+                )}
+              </h3>
               <span>Total Konfirmasi</span>
             </div>
-            <div className='col-md-3 cases'>
-              <h3>{numberWithCommas(cases === undefined ? 0 : cases.cases.recovered !== null ? cases.cases.recovered : 0)}</h3>
+            <div className="col-md-3 cases">
+              <h3>
+                {numberWithCommas(
+                  cases === undefined
+                    ? 0
+                    : cases.cases.recovered !== null
+                    ? cases.cases.recovered
+                    : 0
+                )}
+              </h3>
               <span>Total sembuh</span>
             </div>
-            <div className='col-md-3 cases'>
-              <h3>{numberWithCommas(cases === undefined ? 0 : cases.deaths.total !== null ? cases.deaths.total : 0)}</h3>
+            <div className="col-md-3 cases">
+              <h3>
+                {numberWithCommas(
+                  cases === undefined
+                    ? 0
+                    : cases.deaths.total !== null
+                    ? cases.deaths.total
+                    : 0
+                )}
+              </h3>
               <span>Total Meninggal</span>
             </div>
           </div>
-          <div className='date mt-5'>
+          <div className="date mt-5">
             <span>Kasus COVID-19 Indonesia, {dateBuilder(new Date())}</span>
           </div>
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
